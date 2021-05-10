@@ -1,4 +1,5 @@
-﻿using Abc.Northwind.Entities.Concrete;
+﻿using Abc.Core.DataAccess;
+using Abc.Northwind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Abc.Northwind.DataAccess.Abstract
 {
-    public interface IProductDal
+    public interface IProductDal : IEntitiyRepository<Product>
     {
-        List<Product> GetList();
+       // special methods related to product
     }
 }

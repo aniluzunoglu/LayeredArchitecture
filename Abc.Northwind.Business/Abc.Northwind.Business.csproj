@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Abc.Core\Abc.Core.csproj">
+      <Project>{2feb1b36-4a6d-409b-92aa-96cfab709bb4}</Project>
+      <Name>Abc.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Abc.Northwind.DataAccess\Abc.Northwind.DataAccess.csproj">
       <Project>{a158c206-43c1-4b43-9819-0ded67a24a39}</Project>
       <Name>Abc.Northwind.DataAccess</Name>
