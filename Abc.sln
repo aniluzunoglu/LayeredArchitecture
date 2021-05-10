@@ -17,6 +17,27 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.Northwind.MvcWebUI", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abc.Northwind.WebAPI", "Abc.Northwind.WebAPI\Abc.Northwind.WebAPI.csproj", "{012412AD-838E-4130-8080-4B24662AE67A}"
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Abc.Northwind.WcfService", "Abc.Northwind.WcfService\", "{3E556849-AB4E-486A-96FC-49215F362DC3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51959"
+		Debug.AspNetCompiler.PhysicalPath = "Abc.Northwind.WcfService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51959\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51959"
+		Release.AspNetCompiler.PhysicalPath = "Abc.Northwind.WcfService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51959\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51959"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +72,10 @@ Global
 		{012412AD-838E-4130-8080-4B24662AE67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{012412AD-838E-4130-8080-4B24662AE67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{012412AD-838E-4130-8080-4B24662AE67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E556849-AB4E-486A-96FC-49215F362DC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E556849-AB4E-486A-96FC-49215F362DC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E556849-AB4E-486A-96FC-49215F362DC3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E556849-AB4E-486A-96FC-49215F362DC3}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\ProductManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Abc.Northwind.DataAccess\Abc.Northwind.DataAccess.csproj">
+      <Project>{a158c206-43c1-4b43-9819-0ded67a24a39}</Project>
+      <Name>Abc.Northwind.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abc.Northwind.Entities\Abc.Northwind.Entities.csproj">
+      <Project>{ed133194-288f-4a16-b057-34ba3dfe74b5}</Project>
+      <Name>Abc.Northwind.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
