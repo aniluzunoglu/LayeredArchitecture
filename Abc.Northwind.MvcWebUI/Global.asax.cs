@@ -1,3 +1,5 @@
+using Abc.Core.Utilities.Mvc.Infastructure.Ninject;
+using Abc.Northwind.Business.DependencyResolvers.Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,9 @@ namespace Abc.Northwind.MvcWebUI
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory(new BusinessModule()));
+
+                // when you have another modules, put comma between and add them too :)
         }
     }
 }
