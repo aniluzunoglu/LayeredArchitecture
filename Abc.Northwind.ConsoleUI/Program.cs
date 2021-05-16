@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Abc.Northwind.Business.Abstract;
+using Abc.Northwind.Business.Concrete;
+using Abc.Northwind.DataAccess.Concrete.EntitiyFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +13,8 @@ namespace Abc.Northwind.ConsoleUI
     {
         static void Main(string[] args)
         {
+            // TO DO: refactor IOC 
+            IProductService productService = new ProductManager(new EfProductDal());
         }
     }
 }
