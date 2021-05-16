@@ -54,6 +54,7 @@
     <Compile Include="Abstract\IProductDal.cs" />
     <Compile Include="Concrete\EntitiyFramework\Contexts\NorthwindContext.cs" />
     <Compile Include="Concrete\EntitiyFramework\EfProductDal.cs" />
+    <Compile Include="Concrete\EntitiyFramework\Mappings\ProductMap.cs" />
     <Compile Include="Concrete\NHibernate\NhProductDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
