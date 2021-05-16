@@ -15,6 +15,12 @@ namespace Abc.Northwind.ConsoleUI
         {
             // TO DO: refactor IOC 
             IProductService productService = new ProductManager(new EfProductDal());
+            foreach (var product in productService.GetAll())
+            {
+                Console.WriteLine(product.ProductName);
+            }
+
+            Console.ReadLine();
         }
     }
 }
