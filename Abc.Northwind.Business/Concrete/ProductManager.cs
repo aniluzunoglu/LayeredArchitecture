@@ -1,4 +1,5 @@
-﻿using Abc.Core.CrossCuttingConcerns.Validation.FluentValidation;
+﻿using Abc.Core.Aspects.Postsharp.ValidationAspects;
+using Abc.Core.CrossCuttingConcerns.Validation.FluentValidation;
 using Abc.Northwind.Business.Abstract;
 using Abc.Northwind.Business.ValidationRules.FluentValidation;
 using Abc.Northwind.DataAccess.Abstract;
@@ -19,10 +20,9 @@ namespace Abc.Northwind.Business.Concrete
             _productDal = productDal;
         }
 
+        [FluentValidationAspect(typeof(ProductValidator))]
         public void Add(Product product)
-        {
-            // TO DO: refactor by AOP
-            ValidationTool.FluentValidate(new ProductValidator(),product);
+        {          
             // Business Rules
             _productDal.Add(product);
         }
