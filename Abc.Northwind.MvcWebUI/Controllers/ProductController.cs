@@ -12,6 +12,11 @@ namespace Abc.Northwind.MvcWebUI.Controllers
 {
     public class ProductController : Controller
     {
+        IProductService _productService;
+        public ProductController(IProductService productService)
+        {
+            _productService = productService;
+        }
         // GET: Product
         public ActionResult Index()
         {
