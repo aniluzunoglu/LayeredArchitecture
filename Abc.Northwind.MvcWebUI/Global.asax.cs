@@ -18,6 +18,7 @@ namespace Abc.Northwind.MvcWebUI
             ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory(new BusinessModule()));
 
                 // when you have another modules, put comma between and add them too :)
+
         }
     }
 }
