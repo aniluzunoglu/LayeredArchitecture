@@ -1,6 +1,7 @@
 ﻿using Abc.Northwind.Business.Abstract;
 using Abc.Northwind.Business.Concrete;
 using Abc.Northwind.DataAccess.Concrete.EntitiyFramework;
+using Abc.Northwind.Entities.Concrete;
 using Abc.Northwind.MvcWebUI.Models;
 using System;
 using System.Collections.Generic;
@@ -19,15 +20,19 @@ namespace Abc.Northwind.MvcWebUI.Controllers
         }
         // GET: Product
         public ActionResult Index()
-        {
-            // TO DO: refactor IOC 
-            IProductService productService = new ProductManager(new EfProductDal());
+        {           
             var model = new ProductListViewModel()
             {
-                Products = productService.GetAll()
+                Products =_productService.GetAll()
             };
 
             return View(model);
+        }
+
+        public string Add()
+        {
+            _productService.Add(new Product { ProductName =""});
+            return "Added";
         }
     }
 }

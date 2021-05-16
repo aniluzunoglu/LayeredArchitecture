@@ -1,4 +1,6 @@
-﻿using Abc.Northwind.Business.Abstract;
+﻿using Abc.Core.CrossCuttingConcerns.Validation.FluentValidation;
+using Abc.Northwind.Business.Abstract;
+using Abc.Northwind.Business.ValidationRules.FluentValidation;
 using Abc.Northwind.DataAccess.Abstract;
 using Abc.Northwind.Entities.Concrete;
 using System;
@@ -19,6 +21,8 @@ namespace Abc.Northwind.Business.Concrete
 
         public void Add(Product product)
         {
+            // TO DO: refactor by AOP
+            ValidationTool.FluentValidate(new ProductValidator(),product);
             // Business Rules
             _productDal.Add(product);
         }
